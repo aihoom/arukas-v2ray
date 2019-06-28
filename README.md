@@ -4,3 +4,6 @@
 如果想知道更多v2ray教程，请访问www.aihoom.com
 
 [空白网络](https://www.aihoom.com)
+
+
+具体使用教程请访问https://www.aihoom.com/1666.html
