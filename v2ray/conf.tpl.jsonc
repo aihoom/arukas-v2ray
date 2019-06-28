@@ -1,0 +1,25 @@
+{
+  "log": { "loglevel": "warning", "access": "", "error": "" },
+  "inboundDetour": [
+    {
+      "port": 80,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [ { "id": "{{VMESS_ID}}", "alterId": 64 } ]
+      },
+      "streamSettings": { "network": "ws", "wsSettings": { "path": "{{PROXY_PATH}}", "headers": { "Origin": "" } } }
+    },
+    {
+      "port": 3006,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [ { "id": "{{VMESS_ID}}", "alterId": 64 } ]
+      },
+      "streamSettings": { "network": "kcp", "kcpSettings": { "header": { "type": "wechat-video" } } }
+    }
+  ],
+  "outbound": { "protocol": "freedom", "settings": {} },
+  "dns": {
+    "servers": [ "8.8.8.8", "8.8.4.4", "localhost" ]
+  }
+}
